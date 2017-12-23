@@ -2,14 +2,14 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    sondr: path.resolve(__dirname, 'index.js'),
+    home: path.resolve(__dirname, 'src/entries/home.js')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js'
   },
   devServer: {
-    port: 9000,
+    port: 9000
   },
   module: {
     rules: [
@@ -21,9 +21,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['es2015', 'react', 'stage-2'],
+            presets: ['es2015', 'react', 'stage-2']
           }
-        },
+        }
       },
       {
         test: /\.css$/,
@@ -36,10 +36,11 @@ module.exports = {
           options: {
             limit: 1000000,
             fallback: 'file-loader',
-            name: 'images/[name].[hash].[ext]',
+            name: 'images/[name].[hash].[ext]'
           }
         }
-      },
+      }
     ]
   }
 }
+;
