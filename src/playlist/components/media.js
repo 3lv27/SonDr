@@ -14,10 +14,7 @@ class Media extends PureComponent {
         author: '3lv27'
     }
     handleClick = (event) => {
-        // console.log(this.props.image)
-        this.setState({
-            author: 'Fer For'
-        })
+      this.props.openModal(this.props)
     }
     render() {
         // const styles = {
